@@ -1,0 +1,43 @@
+                           PROJET 6 API 
+Api CRUD => Create Read Update Delete
+
+Instaler node js
+
+le Frontend est cloné avec GIT CLONE 
+                Instalé avec npm install
+                lancé avec npm run start
+
+DEMARRER LE SERVEUR NODE 
+    Initialiser le projet :
+        CD BACKEND  => npm init => faire entrer jusqu'a entry point et merttre (server.js)
+
+Repository GIT pour mettre en ligne et enregistrer sur github 
+    git init => qui crée le depot git du projet
+        dans le dossier backend creer un fichier .gitignore pour permettre au repogit 
+        de savoir quel fichier il ne faut pas charger sur github
+            dans le fichier .gitignore ecrire node_modules
+
+Dans le dossier backend
+    Ajouter un fichier server.js
+
+DEMARRER UN SERVEUR BASIQUE
+    dans le fichier server.js importer le package http de node 
+    creer un serveur qui va ecouter attendre les requetes http et qui va y repondre
+        const http = require ('http'); //importer le package
+        const server = http.createServer(req, res )
+
+Installer nodemon
+    dans le terminal du dossier backend 
+    faire:
+        npm install -g nodemon
+    pour l'utiliser taper dans le ternimal 
+        nodemon pour que le server redemmarre a chaque modification du fichier
+
+
+APPLICATION EXPRESS
+    INSTALER EXPRESS    
+        Dans le terminal du dossier backend taper 
+            npm install express --save
+        dans le dossier backend creer un fichier app.js
+        dans ce fichier importer en creant une constante 
+            const express = require('express');
