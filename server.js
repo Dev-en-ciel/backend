@@ -21,6 +21,9 @@ const normalizePort = val => {
 const port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
+
+//fonction  qui recherche les differente erreurs et les geres.
+// elle est ensuite enregistrer dans le serveur
 const errorHandler = error => {
   if (error.syscall !== 'listen') {
     throw error;
@@ -40,10 +43,13 @@ const errorHandler = error => {
       throw error;
   }
 };
+
+
 //creer un server, prend automatiquement 2 arguments (req => requete et res => reponse)
 //cette methode prend en argument la fonction qui sera applée a chaque requéte
 const server = http.createServer(app);
 
+//ecouteur d'evenement
 server.on('error', errorHandler);
 server.on('listening', () => {
   const address = server.address();

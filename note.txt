@@ -41,3 +41,9 @@ APPLICATION EXPRESS
         dans le dossier backend creer un fichier app.js
         dans ce fichier importer en creant une constante 
             const express = require('express');
+
+
+CREER UNE ROUTE GET 
+    LE Frontend doit s'executer dans le navigateur
+        dans le dossier frontend taper dans e terminal 
+            npù run start pour acceder à http://localhost:4200/

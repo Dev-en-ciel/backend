@@ -38,8 +38,9 @@ app.post('/api/stuff', (req, res, next) => {
     .then(() => res.status(201).json({ message: 'Objet enregistré !'}))
     .catch(error => res.status(400).json({ error }));
 });
-
+//middleware qui requete la route api/stuff
 app.get('/api/stuff', (req, res, next) => {
+  //tableau contenant un objet
   const stuff = [
     {
       _id: 'oeihfzeoi',
@@ -58,6 +59,7 @@ app.get('/api/stuff', (req, res, next) => {
       userId: 'qsomihvqios',
     },
   ];
+  //attribut la reponse 200 et renvoie le json avec le stuff (tableau)
   res.status(200).json(stuff);
 });
 //exportation de l'application pour pouvoir y acceder depuis les autres fichiers
