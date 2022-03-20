@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 
 //schema de données 
 const thingSchema = mongoose.Schema({
-    title: { type: String, required: true},//champ titre qui est obligatoire
+    title: { type: String, required: true}, //les champs avec required sont obligatoire
     description: {type: String, required : true},
     imageUrl: {type: String, required : true},
     userId: {type: String, required : true},
