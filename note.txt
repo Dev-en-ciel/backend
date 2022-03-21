@@ -46,4 +46,14 @@ APPLICATION EXPRESS
 CREER UNE ROUTE GET 
     LE Frontend doit s'executer dans le navigateur
         dans le dossier frontend taper dans e terminal 
-            npù run start pour acceder à http://localhost:4200/
+            npm run start pour acceder à http://localhost:4200/
+
+definition:
+    bcrypt => package de cryptage 
+    mongoose-unique-validator ameliore les messages d'erreur lors de l'enregistrement de données uniques
+
+INSTALATION DU PACKAGE DE VALIDATION 
+    Aller sur le dossier backend 
+        taper dans le terminal npm install -save mongoose-unique-validator 
+
+Creer des utilisateurs 
