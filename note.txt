@@ -57,3 +57,5 @@ INSTALATION DU PACKAGE DE VALIDATION
         taper dans le terminal npm install -save mongoose-unique-validator 
 
 Creer des utilisateurs 
+    Aller sur le dossier backend
+        dans le terminal taper npm install --save bcrypt

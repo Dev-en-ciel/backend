@@ -3,8 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const app = express();
-//importation du router
+//importation des router
 const stuffRoutes = require('./routes/stuff');
+const userRoutes = require('./routes/user');
 
 mongoose.connect('mongodb+srv://francko:ZnlFMouBv2sJdKMx@test1.i9df7.mongodb.net/test1?retryWrites=true&w=majority',
   { useNewUrlParser: true,
@@ -28,6 +29,7 @@ app.use((req, res, next) => {
 
 //importation des routes du fichier stuff.js
 app.use('/api/stuff', stuffRoutes);
+app.use('/api/auth', userRoutes);
 
 //exportation de l'application pour pouvoir y acceder depuis les autres fichiers
 //notamment le server node
