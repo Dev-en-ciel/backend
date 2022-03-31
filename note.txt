@@ -59,3 +59,14 @@ INSTALATION DU PACKAGE DE VALIDATION
 Creer des utilisateurs 
     Aller sur le dossier backend
         dans le terminal taper npm install --save bcrypt
+        importer dans le fichier users/controllers
+
+CREER  DES TOKENS ALEATOIRES
+    Allez sur le dossier backend 
+    dans le terminal tape npm install --save* jsonwebtoken
+        importer dans le fichier users/controllers
+* n'est pas utile de le mettre si une version recente de node est instalé.
+
+IMPLEMENTATION DES TELECHARGEMENT DE FICHIERS
+    Aller sur le backend
+    dans le terminal taper npm install multer
