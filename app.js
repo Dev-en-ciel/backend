@@ -7,6 +7,9 @@ const app = express();
 const stuffRoutes = require('./routes/stuff');
 const userRoutes = require('./routes/user');
 
+//importation pour acceder au path du server
+const path = require('path');
+
 mongoose.connect('mongodb+srv://francko:ZnlFMouBv2sJdKMx@test1.i9df7.mongodb.net/test1?retryWrites=true&w=majority',
   { useNewUrlParser: true,
     useUnifiedTopology: true })
@@ -26,6 +29,9 @@ app.use((req, res, next) => {
   //de passer a la suivante
   next();
 });
+
+//ajout du gestionaire de routage
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 //importation des routes du fichier stuff.js
 app.use('/api/stuff', stuffRoutes);

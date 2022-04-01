@@ -70,3 +70,4 @@ CREER  DES TOKENS ALEATOIRES
 IMPLEMENTATION DES TELECHARGEMENT DE FICHIERS
     Aller sur le backend
     dans le terminal taper npm install multer
+    importer  dans le fichier multer-config.js que l'on as creer.
