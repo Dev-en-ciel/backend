@@ -11,13 +11,12 @@ const userRoutes = require('./routes/user');
 const path = require('path');
 
 mongoose.connect('mongodb+srv://francko:ZnlFMouBv2sJdKMx@test1.i9df7.mongodb.net/test1?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
-
-//Middleware qui donne acce au corp de la requete
-app.use(express.json());
 
 //middleware general qui sera appliqué à toutes les routes ZnlFMouBv2sJdKMx
 app.use((req, res, next) => {
@@ -29,6 +28,9 @@ app.use((req, res, next) => {
   //de passer a la suivante
   next();
 });
+
+//Middleware qui donne acces au corp de la requete
+app.use(express.json());
 
 //ajout du gestionaire de routage
 app.use('/images', express.static(path.join(__dirname, 'images')));
